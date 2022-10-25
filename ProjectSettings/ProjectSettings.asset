@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 23
+<<<<<<< HEAD
   productGUID: c4576597cc6d5e24a8dab95d04fbfc64
+=======
+  productGUID: 9039d87e3d8536f498b7e9ad08f26e9f
+>>>>>>> origin/master
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +17,11 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
+<<<<<<< HEAD
   productName: TestGit
+=======
+  productName: 0t1
+>>>>>>> origin/master
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -156,13 +164,19 @@ PlayerSettings:
     enable360StereoCapture: 0
   isWsaHolographicRemotingEnabled: 0
   enableFrameTimingStats: 0
+<<<<<<< HEAD
   enableOpenGLProfilerGPURecorders: 1
+=======
+>>>>>>> origin/master
   useHDRDisplay: 0
   D3DHDRBitDepth: 0
   m_ColorGamuts: 00000000
   targetPixelDensity: 30
   resolutionScalingMode: 0
+<<<<<<< HEAD
   resetResolutionOnWindowResize: 0
+=======
+>>>>>>> origin/master
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
@@ -247,7 +261,11 @@ PlayerSettings:
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
   clonedFromGUID: 10ad67313f4034357812315f3c407484
+<<<<<<< HEAD
   templatePackageId: com.unity.template.2d@6.1.1
+=======
+  templatePackageId: com.unity.template.2d@6.1.0
+>>>>>>> origin/master
   templateDefaultScene: Assets/Scenes/SampleScene.unity
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
@@ -555,7 +573,10 @@ PlayerSettings:
   ps4videoRecordingFeaturesUsed: 0
   ps4contentSearchFeaturesUsed: 0
   ps4CompatibilityPS5: 0
+<<<<<<< HEAD
   ps4AllowPS5Detection: 0
+=======
+>>>>>>> origin/master
   ps4GPU800MHz: 1
   ps4attribEyeToEyeDistanceSettingVR: 0
   ps4IncludedModules: []
@@ -625,7 +646,10 @@ PlayerSettings:
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 
+<<<<<<< HEAD
   vcxProjDefaultLanguage: 
+=======
+>>>>>>> origin/master
   XboxOneProductId: 
   XboxOneUpdateKey: 
   XboxOneSandboxId: 
