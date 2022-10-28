@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MoveJoyStick : JoyStick
 {
-
     protected override void Update()
     {
         base.Update();
@@ -12,7 +11,7 @@ public class MoveJoyStick : JoyStick
         {
             Vector3 direct = Vector3.Cross(mainCharacter.forwardGlobal, dir);
             DIRECTION idir = direct.z > 0 ? DIRECTION.Counterclockwise : DIRECTION.Clockwise;
-            mainCharacter.Movement(idir);
+            mainCharacter.Movement(idir, dir);
         }
     }
 }
