@@ -9,16 +9,22 @@ public enum WeaponType
     ChemicalWeapon,
 }
 
-public class Weapon : MonoBehaviour
+public abstract class Weapon : MonoBehaviour
 {
     public float weight;
     public float attackRange;
+    public float attackWidth;
     public float spatterRange;
-    public float attackSpeed;
+    public float attackDelay;
     public float buildCost;
     public float useCost;
+    public float bulletSpeed;
 
-    protected virtual void Attack() { }
+    public Transform CasingPos;
+
+    public abstract void DoAttack(Vector3 dir);
+    protected abstract void Shooting(Vector3 dir);
+    protected abstract bool isAllowedShoot();
 
 
 }

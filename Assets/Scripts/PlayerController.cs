@@ -48,11 +48,6 @@ public class PlayerController : MonoBehaviour
         if (cosTheta > Mathf.Sqrt(3) / 2.0) rb.AddForce(forwardGlobal * straightForce);
     }
 
-    public void Attack()
-    {
-
-    }
-
     private void OnTriggerStay2D(Collider2D collision)
     {
         timer -= Time.deltaTime;
