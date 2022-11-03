@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using MyTimer;
 using UnityEngine;
 
 public class TimeManager : MonoSingleton<TimeManager>
 {
+    /// <summary>
+    /// test
+    /// </summary>
+    //Metronome timer = new Metronome();
+
+
     #region 玩家阵营
     [Header("玩家")]
     public List<Transform> playerSpawns;
@@ -23,7 +30,7 @@ public class TimeManager : MonoSingleton<TimeManager>
     public int minionsSummonCD;
     public List<Transform> minionsSpawns;
     public List<GameObject> minions;
-    private void MinionsUpdate()
+    private void MinionsUpdate(float p)
     {
         foreach (Transform spawn in minionsSpawns)
         {
@@ -68,7 +75,12 @@ public class TimeManager : MonoSingleton<TimeManager>
 
     private void Start()
     {
-        // 开启线程
+        // 初始化
         TurretInit();
+        // 开启线程
+        //timer.OnComplete += MinionsUpdate;
+        //timer.Initialize(1);
+
+        //timer.Paused = true;
     }
 }
