@@ -2,12 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using Services;
 
 public class TestWeapon : Weapon
 {
+    private EventSystem _eventSystem;
+
+    public void Awake()
+    {
+        _eventSystem = ServiceLocator.Get<EventSystem>();
+        _eventSystem.AddListener<Vector3>(EEvent.GameLoadIn, Shooting);
+    }
+
     private float lastTime = 0f;
     public override void DoAttack(Vector3 dir)
     {
+        _eventSystem.Invoke<int>(EEvent.attck,5);
         if (isAllowedShoot())
         {
             Shooting(dir);
