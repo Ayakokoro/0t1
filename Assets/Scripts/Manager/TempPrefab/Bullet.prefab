@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 6809501065607416792}
   - component: {fileID: 6809501065607416795}
   - component: {fileID: 6809501065607416794}
-  - component: {fileID: -7694031047242473222}
+  - component: {fileID: 2235215258969572737}
   - component: {fileID: 7735667479111906366}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Team1
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6809501065607416789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.7292824, y: -1.5355875, z: -1.1190705}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -100,7 +100,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7694031047242473222
+--- !u!114 &2235215258969572737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,10 +109,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6809501065607416789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2a5e08bd0f7c0048b9040d8daadb48b, type: 3}
+  m_Script: {fileID: 11500000, guid: c2042355f4a187049b206d21daaa4df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kind: 0
 --- !u!54 &7735667479111906366
 Rigidbody:
   m_ObjectHideFlags: 0

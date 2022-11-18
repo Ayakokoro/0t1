@@ -16,7 +16,7 @@ public class BulletPool : MonoSingleton<BulletPool>
     /// 子弹发出者对应子弹
     /// </summary>
     [Header("子弹")]
-    public GameObject turretBullet;
+    [SerializeField] private GameObject Bullet;
     #endregion
     /// <summary>
     /// 新建一个子弹进入对象池
@@ -24,9 +24,8 @@ public class BulletPool : MonoSingleton<BulletPool>
     /// <param name="kind">子弹种类</param>
     private void NewBullet(BulletKind kind)
     {
-        now = Instantiate(turretBullet);
-        now.GetComponent<BaseBullet>().kind = kind;
-        //now.GetComponent<BaseBullet>().Binding(Instance);
+        now = Instantiate(Bullet);
+        now.GetComponent<BaseBullet>().SetBullet(kind);
         now.transform.parent = transform;
         now.SetActive(false);
         bulletsPool[(int)kind].Push(now);
@@ -53,11 +52,11 @@ public class BulletPool : MonoSingleton<BulletPool>
     /// 回收子弹
     /// </summary>
     /// <param name="bullet">子弹实例</param>
-    public void RecycleBullet(GameObject bullet)
+    public void RecycleBullet(GameObject bullet, BulletKind kind)
     {
-        Debug.Log((int)now.GetComponent<BaseBullet>().kind);
-        Debug.Log(bulletsPool[(int)now.GetComponent<BaseBullet>().kind]);
-        bulletsPool[(int)now.GetComponent<BaseBullet>().kind].Push(bullet);
+        Debug.Log((int)kind);
+        Debug.Log(bulletsPool[(int)kind]);
+        bulletsPool[(int)kind].Push(bullet);
         bullet.SetActive(false);
     }
 }

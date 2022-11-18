@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turret : BaseEntity
+public class FarMinions : BaseEntity
 {
     private void Start()
     {
         base.Start();
-        Debug.Log("New Turret");
     }
 }

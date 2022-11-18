@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Team1
   - Team2
+  - Weapon
+  - Bullet
   layers:
   - Default
   - TransparentFX

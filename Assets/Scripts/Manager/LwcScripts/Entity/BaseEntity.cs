@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BaseEntity : MonoBehaviour
 {
-    private void Start()
+    protected void Start()
     {
         health = maxHealth;
     }
@@ -21,11 +21,19 @@ public class BaseEntity : MonoBehaviour
     }
     private void ChemicalDamege(int atk)
     {
-
+        health -= atk;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     private void DirectedEnergyDamage(int atk)
     {
-
+        health -= atk;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     /// <summary>
     /// 造成伤害

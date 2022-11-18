@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4669330068569319977}
   - component: {fileID: 4669330068569319978}
   - component: {fileID: 4669330068569319979}
-  - component: {fileID: -9074262738000239651}
   - component: {fileID: -6899813093496260228}
+  - component: {fileID: 6178104264092923258}
   m_Layer: 0
   m_Name: Minions
   m_TagString: Team2
@@ -32,7 +32,8 @@ Transform:
   m_LocalPosition: {x: -1.2194576, y: -2.17, z: -2.2234116}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8780277138487584477}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -94,28 +95,11 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4669330068569319980}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-9074262738000239651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4669330068569319980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbdd03b982afc8e4483ef4140702404d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 20
-  baseArmor: 0
-  kineticEnergyArmor: 0
-  chemicalArmor: 0
-  directedEnergyArmor: 0
 --- !u!54 &-6899813093496260228
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -132,3 +116,82 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6178104264092923258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4669330068569319980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bfd1d92b85b39e4387ac6f8efa538a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 20
+  baseArmor: 0
+  kineticEnergyArmor: 0
+  chemicalArmor: 0
+  directedEnergyArmor: 0
+--- !u!1001 &3812167248980931338
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4669330068569319976}
+    m_Modifications:
+    - target: {fileID: 5565963584097998295, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565963584097998295, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565963584097998295, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565963584097998295, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565963584097998295, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565963584097998295, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565963584097998295, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565963584097998295, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565963584097998295, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565963584097998295, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565963584097998295, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129502839985890610, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+      propertyPath: m_Name
+      value: Weapon
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+--- !u!4 &8780277138487584477 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5565963584097998295, guid: 48e73635c75fcdc489f7baa083ec5a81, type: 3}
+  m_PrefabInstance: {fileID: 3812167248980931338}
+  m_PrefabAsset: {fileID: 0}

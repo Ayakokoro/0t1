@@ -12,19 +12,23 @@ public enum BulletKind
     CHEMICAL,
     DIRECTEDENERGY
 }
-public abstract class BaseBullet : MonoBehaviour
+public class BaseBullet : MonoBehaviour
 {
-    protected BulletPool bulletPool;
     protected GameObject target;
     protected GameObject from;
     protected Rigidbody rigidBody;
     protected int atk;
     protected int speed;
     protected bool isChaser;
-    public BulletKind kind;
+    protected BulletKind kind;
     protected void Start()
     {
-        bulletPool = GameObject.Find("BulletPool").GetComponent<BulletPool>();
+        rigidBody = GetComponent<Rigidbody>();
+    }
+    private void Update()
+    {
+        if (isChaser) ChaserUpdate();
+        else { NotChaserUpdate(); } // TODO Not Chaser
     }
     private void OnTriggerEnter(Collider collision)
     {
@@ -34,8 +38,7 @@ public abstract class BaseBullet : MonoBehaviour
             {
                 collision.gameObject.GetComponent<BaseEntity>().Damage(kind, atk);
                 Debug.Log(gameObject);
-                Debug.Log(bulletPool);
-                bulletPool.RecycleBullet(gameObject);
+                BulletPool.Instance.RecycleBullet(gameObject, kind);
             }
         } 
         else
@@ -43,7 +46,7 @@ public abstract class BaseBullet : MonoBehaviour
             if (!collision.gameObject.CompareTag(from.gameObject.tag))
             {
                 collision.gameObject.GetComponent<BaseEntity>().Damage(kind, atk);
-                bulletPool.RecycleBullet(gameObject);
+                BulletPool.Instance.RecycleBullet(gameObject, kind);
             }
         }
     }
@@ -56,5 +59,33 @@ public abstract class BaseBullet : MonoBehaviour
         atk = _bulletAtk;
         speed = _bulletSpeed;
         isChaser = _bulletIsChaser;
+    }
+    public void SetBullet(GameObject _from, BulletKind _bulletKind, int _bulletAtk, int _bulletSpeed, bool _bulletIsChaser)
+    {
+        from = _from;
+        kind = _bulletKind;
+        atk = _bulletAtk;
+        speed = _bulletSpeed;
+        isChaser = _bulletIsChaser;
+    }
+    public void SetBullet(BulletKind _bulletKind)
+    {
+        kind = _bulletKind;
+    }
+    private void NotChaserUpdate()
+    {
+
+    }
+    private void ChaserUpdate()
+    {
+        if (target != null)
+        {
+            transform.forward = target.transform.position - transform.position;
+            rigidBody.velocity = transform.forward * speed;
+        }
+        else
+        {
+            BulletPool.Instance.RecycleBullet(gameObject, kind);
+        }
     }
 }
